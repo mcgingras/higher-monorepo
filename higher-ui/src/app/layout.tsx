@@ -20,10 +20,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Web3Provider>
-          <main className="bg-[#3C8827] p-4 text-white min-h-screen w-full">
-            <Nav />
-            {children}
-          </main>
+          <div className="min-h-screen w-full">
+            <main className="p-4 max-w-screen-sm mx-auto">
+              <Nav />
+              {children}
+            </main>
+          </div>
         </Web3Provider>
       </body>
     </html>

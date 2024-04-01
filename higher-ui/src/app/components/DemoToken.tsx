@@ -110,7 +110,13 @@ const Arrow = ({ x, y, degree }: { x: number; y: number; degree: number }) => {
   );
 };
 
-const DemoToken = ({ degree }: { degree: number }) => {
+const DemoToken = ({
+  degree,
+  className,
+}: {
+  degree: number;
+  className?: string;
+}) => {
   const normalizedDegree = 90 - degree;
   const degreeIndex = Math.floor(normalizedDegree / 15);
   // @ts-ignore
@@ -123,6 +129,7 @@ const DemoToken = ({ degree }: { degree: number }) => {
 
   return (
     <svg
+      className={className}
       width={ARROW_SIZE * GRID_WIDTH}
       height={ARROW_SIZE * GRID_HEIGHT}
       viewBox={`0 0 ${ARROW_SIZE * GRID_WIDTH} ${ARROW_SIZE * GRID_HEIGHT}`}
